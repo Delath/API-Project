@@ -25,7 +25,7 @@ int main(){
 		}
 	}
 	temp='l';
-	unsigned int topk[k]; /* Matrix topk to print at the end */
+	unsigned int topk[k]; /* Topk matrix to be printed at the end */
 	unsigned int topk_cam[k];
 	unsigned int **mat; /* Adjacency matrix */ 
 	unsigned int save[d];
@@ -91,7 +91,7 @@ int main(){
 					}
 				}
 				if(min==4294967295){ 
-					flag=1; /* If nodes do not connect the flag=1 */
+					flag=1; /* If nodes do not connect then flag=1 */
 				}
 				if(!flag){
 					check[node]=1;
@@ -101,7 +101,7 @@ int main(){
 						break;
 					}
 					if(check[j]==0 && mat[node][j]!=0){
-						/* Check if it the minimum */
+						/* Check if it is the minimum */
 						if((mat[node][j]+min)<save[j]){ /* If the path with more nodes is better then it uses that one */
 							save[j]=mat[node][j]+min;
 						}
